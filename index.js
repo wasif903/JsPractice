@@ -21,7 +21,6 @@
 // -- Disadvantages --
 // closures unintentionally retain references to variables, causing memory to remain allocated longer than necessary.
 
-
 //--------------------------- Currying -----------------------------------------
 // function curryingFunc(productPrice) {
 //   return function innerFirst(discountPercentage) {
@@ -44,4 +43,40 @@
 // -- Disadvantages --
 // Currying relies on closures, which can unintentionally retain references to variables, causing memory to remain allocated longer than necessary.
 
+//---------------------------- Arrow Function Vs Normal Function ----------------------------
+// Normal Function:
+// In a regular function, this refers to the object that called the function.
+// const Obj = {
+//     name: "Wasif",
+//     designation: "Mernstack Developer",
+//     data: {
+//         teamLead: "Rehman"
+//     },
+//     sayHello : function () {
+//         console.log("Myself",this.name, "and i work as a", this.designation, 'and sadly i work under a chutiya named', this.data.teamLead)
+//     }
+// }
+// Obj.sayHello();
 
+// Arrow Function:
+// Since the arrow function doesn’t have its own this, it tries to use this from the outer scope — which in this case is the global object (or undefined in strict mode).
+// const Obj = {
+//   name: "Wasif",
+//   designation: "Mernstack Developer",
+//   data: {
+//     teamLead: "Rehman"
+//   },
+//   sayHello: function() {
+//    return (() => {
+//         console.log(
+//             "Myself",
+//             this.name,
+//             "and i work as a",
+//             this.designation,
+//             "and sadly i work under a chutiya named",
+//             this.data.teamLead
+//         );
+//     })()
+//   }
+// };
+// Obj.sayHello();
