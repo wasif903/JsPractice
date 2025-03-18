@@ -21,7 +21,6 @@
 // -- Disadvantages --
 // closures unintentionally retain references to variables, causing memory to remain allocated longer than necessary.
 
-
 //--------------------------- Currying -----------------------------------------
 // function curryingFunc(productPrice) {
 //   return function innerFirst(discountPercentage) {
@@ -44,4 +43,11 @@
 // -- Disadvantages --
 // Currying relies on closures, which can unintentionally retain references to variables, causing memory to remain allocated longer than necessary.
 
+// Better Approach Than Currying
+// function calculatePrice(productPrice, discountPercentage, additionalCost) {
+//     const discount = (discountPercentage / 100) * productPrice;
+//     const finalPrice = productPrice - discount + additionalCost;
+//     console.log(`Final Price: ${finalPrice}`);
+//   }
+//   calculatePrice(150, 30, 20);
 
