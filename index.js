@@ -90,3 +90,14 @@
 //   }
 // };
 // Obj.sayHello();
+
+
+//---------------------------- Hoisting  ----------------------------
+// In JavaScript, hoisting is the process where variable and function declarations are moved to the top of their containing scope (either function or global) during the compilation phase. but javascript doesn't do it with let and const because of TDZ, The Temporal Dead Zone (TDZ) is the period between the start of a scope and the point where a variable declared with let or const is initialized.
+
+// function hoisting() {
+//     count = 1;
+//     console.log(count)
+//     var count;
+// }
+// hoisting();
