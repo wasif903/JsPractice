@@ -270,3 +270,46 @@
 // console.log(convert("PAYPALISHIRING", 3));
 // console.log(convert("PAYPALISHIRING", 4));
 // console.log(convert("A", 1));
+
+// ----------------------------------- Question 7 ------------------------------
+// ----------------------------------- Reverse Integer ------------------------------
+
+// Assume the environment does not allow you to store 64-bit integers (signed or unsigned).
+
+// Example 1:
+// Input: x = 123
+// Output: 321
+
+// Example 2:
+// Input: x = -123
+// Output: -321
+
+// Example 3:
+// Input: x = 120
+// Output: 21
+
+// const reverse = (x) => {
+//     let result = "";
+//     if (x == 0) return 0;
+//     if (x < 0) result += "-"
+
+//     x = Math.abs(x);
+
+//     while (x > 0) {
+//         let temp = x % 10;
+//         result += temp.toFixed(0).toString();
+//         x = Math.floor(x / 10);
+//     }
+
+//     if (result < -2147483648 || result > 2147483647) { //This Condition Handle 32 bit integer if input is 64 bit integer returns zero
+//         return 0;
+//     }
+
+//     return Number(result);
+// }
+
+// console.log(reverse(123));
+// console.log(reverse(-123));
+// console.log(reverse(120));
+// console.log(reverse(102));
+// console.log(reverse(1534236469));
