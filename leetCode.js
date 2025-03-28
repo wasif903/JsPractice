@@ -175,3 +175,46 @@
 
 // console.log(findMedianSortedArrays([1, 3], [2]));
 // console.log(findMedianSortedArrays([1, 2], [3, 4]));
+
+// ----------------------------------- Question 5 ------------------------------
+// ----------------------------------- Longest Palindromic Substring ------------------------------
+
+// Given a string s, return the longest palindromic substring in s.
+
+// Example 1:
+// Input: s = "babad"
+// Output: "bab"
+// Explanation: "aba" is also a valid answer.
+
+// Example 2:
+// Input: s = "cbbd"
+// Output: "bb"
+
+// const longestPalindrome = (s) => {
+//     if (s.length <= 1) return s;
+
+//     let start = 0, maxLength = 0;
+
+//     function expandAroundCenter(left, right) {
+//         while (left >= 0 && right < s.length && s[left] === s[right]) {
+//             left--;
+//             right++;
+//         }
+
+//         const length = right - left - 1;
+//         if (length > maxLength) {
+//             start = left + 1;
+//             maxLength = length;
+//         }
+//     }
+
+//     for (let i = 0; i < s.length; i++) {
+//         expandAroundCenter(i, i);
+//         expandAroundCenter(i, i + 1);
+//     }
+
+//     return s.substring(start, start + maxLength);
+// };
+
+// console.log(longestPalindrome("babad"));
+// console.log(longestPalindrome("cbbd"));
